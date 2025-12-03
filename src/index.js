@@ -12,6 +12,8 @@ app.use(bodyParser.json()) // Sử dụng body-parser để phân tích cú phá
 app.use('/branches', branchRouter);
 
 
-app.listen(3002, () => {
-    console.log('Branch service is running on port 3002');
-});
+// app.listen(3002, () => {
+//     console.log('Branch service is running on port 3002');
+// });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Server listening on", PORT));
