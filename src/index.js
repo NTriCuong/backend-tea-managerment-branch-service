@@ -13,7 +13,7 @@ app.use(bodyParser.json()) // Sử dụng body-parser để phân tích cú phá
 // app.use('/branches', branchRouter);
 app.use(cors({ origin: "*" }));
 app.use("/",(req, res)=>{
-    res.json("Branch Service is up and running hehe");
+    res.json("Branch Service đã kết nối thành công");
 });
 
 
