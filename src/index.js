@@ -2,6 +2,7 @@ import express from 'express' //sử dụng cú pháp import thay vì require do
 import morgan from 'morgan' //import morgan để log các request HTTP
 import bodyParser from 'body-parser'
 import branchRouter from './routers/branchRouter.js';
+import cors from "cors";
 
 
 const app = express();
@@ -10,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false })) // Sử dụng body-parser �
 app.use(bodyParser.json()) // Sử dụng body-parser để phân tích cú pháp JSON trong các yêu cầu đến
 
 // app.use('/branches', branchRouter);
+app.use(cors({ origin: "*" }));
 app.use("/",(req, res)=>{
     res.send("Branch Service is up and running hehe");
 });
