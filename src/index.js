@@ -13,12 +13,12 @@ app.use(bodyParser.json()) // Sử dụng body-parser để phân tích cú phá
 // app.use('/branches', branchRouter);
 app.use(cors({ origin: "*" }));
 app.use("/",(req, res)=>{
-    res.json("Branch Service đã kết nối thành công");
+    res.json("Branch Service đã kết nối thành công, test sau khi coppy vao project chinh");
 });
 
 
-// app.listen(3002, () => {
-//     console.log('Branch service is running on port 3002');
-// });
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log("Server listening on", PORT));
+app.listen(3002, () => {
+    console.log('Branch service is running on port 3002');
+});
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log("Server listening on", PORT));
