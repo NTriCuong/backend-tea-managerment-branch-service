@@ -10,7 +10,8 @@ app.use(morgan('combined')) // xử dụng để xem log của resquest HTTP
 app.use(bodyParser.urlencoded({ extended: false })) // Sử dụng body-parser để phân tích cú pháp URL-encoded trong các yêu cầu đến
 app.use(bodyParser.json()) // Sử dụng body-parser để phân tích cú pháp JSON trong các yêu cầu đến
 
-// app.use('/branches', branchRouter);
+// app.use('/branches', branchRouter);;
+const data = {name:"Nguyễn Trí Cường", MSSV:"DH52200424", Lớp:"D22-TH08"};
 app.use(cors({ origin: "*" }));
 app.use("/",(req, res)=>{
     res.json("Branch Service đã kết nối thành công, test sau khi coppy vao project chinh");
