@@ -27,7 +27,7 @@ const createBranch=async(req, res)=>{
     try{
         const data=req.body;
         const result=await postBranch(data);
-        res.status(201).json({message: "Branch created", branchId: result.insertId});
+        res.status(201).json({message: "Thêm mới thành công", branchId: result.insertId});
     }catch(error){
          console.log("Error in createBranch:", error);
         res.status(500).json({message: " server error: "+ error.message});
@@ -42,7 +42,7 @@ const updateBranchById=async(req, res)=>{
             return res.status(404).json({message: "Branch not found"});
         }
         await putBranch(branchId, data);
-        res.status(200).json({message: "Branch updated"});
+        res.status(200).json({message: "Cập nhật thành công"});
     }catch(error){
          console.log("Error in updateBranchById:", error);
         res.status(500).json({message: " server error: "+ error.message});
@@ -56,7 +56,7 @@ const deleteBranchById=async(req, res)=>{
             return res.status(404).json({message: "Branch not found"});
         }
         await deleteBranch(branchId); // xoá
-        res.status(200).json({message: "Branch deleted"});
+        res.status(200).json({message: "Xoá thành công"});
     }catch(error){
          console.log("Error in deleteBranchById:", error);
         res.status(500).json({message: " server error: "+ error.message});
