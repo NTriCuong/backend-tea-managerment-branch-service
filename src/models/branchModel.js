@@ -8,7 +8,7 @@ const getBranchById=async(branchId)=>{
     const [rows]=await pool.query("SELECT * FROM BRANCHS WHERE Branch_id=?", [branchId]);
     return rows;
 }
-const postBranch=async(branchData)=>{ // id trigger tự sinh
+const postBranch=async(branchData)=>{ 
     const {adress}= branchData;
     const [result]=await pool.query("INSERT INTO BRANCHS (Adress) VALUES (?)", [adress]);
     return result;

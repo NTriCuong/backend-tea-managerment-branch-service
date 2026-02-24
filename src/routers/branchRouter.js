@@ -3,7 +3,7 @@ import {verifyAccessToken, requireAdmin} from '../controllers/verifyAccessToken.
 import express from 'express';
 const router=express.Router();
 
-router.get('/',verifyAccessToken, requireAdmin, getAllBranches);
+router.get('/', getAllBranches);
 router.get('/:branchId',verifyAccessToken, requireAdmin, findBranchById);
 router.post('/',verifyAccessToken, requireAdmin, createBranch);
 router.put('/:branchId',verifyAccessToken, requireAdmin, updateBranchById);

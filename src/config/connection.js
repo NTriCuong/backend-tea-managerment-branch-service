@@ -4,12 +4,6 @@ import dotenv from 'dotenv';
 // đọc biến môi trường từ file .evn.db
 dotenv.config(); 
 // tạo pool chuẩn kết nối
-// console.log("process.env.DB_HOS => ", process.env.DB_HOST);
-// console.log("process.env.DB_USER => ", process.env.DB_USER);
-// console.log("process.env.DB_PASSWORD => ", process.env.DB_PASSWORD);
-// console.log("process.env.DB_NAME => ", process.env.DB_NAME);
-// console.log("process.env.DB_PORT => ", process.env.DB_PORT);
-
 
 
 const pool = mysql.createPool({
